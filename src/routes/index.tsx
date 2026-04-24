@@ -1,26 +1,38 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from "@/components/Hero";
+import { FeaturesStrip } from "@/components/FeaturesStrip";
+import { AboutSection } from "@/components/AboutSection";
+import { ProgramsSection } from "@/components/ProgramsSection";
+import { CampusCinematic } from "@/components/CampusCinematic";
+import { WhyUs } from "@/components/WhyUs";
+import { Testimonials } from "@/components/Testimonials";
+import { Faculty } from "@/components/Faculty";
+import { CtaBanner } from "@/components/CtaBanner";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Nihshreyasa Vidyapeeth — Shaping Future Minds | Village School, Jharkhand" },
+      { name: "description", content: "Where creativity meets technology and confidence grows. NCERT/JAC village school for classes 1–7 with 200+ students, big playground & nature-connected campus." },
+      { property: "og:title", content: "Nihshreyasa Vidyapeeth — Shaping Future Minds" },
+      { property: "og:description", content: "A growing village school with 200+ students, joyful learning, NCERT curriculum and a sprawling playground." },
+    ],
+  }),
+  component: HomePage,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function HomePage() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Hero />
+      <FeaturesStrip />
+      <AboutSection />
+      <ProgramsSection />
+      <CampusCinematic />
+      <WhyUs />
+      <Testimonials />
+      <Faculty />
+      <CtaBanner />
+    </>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }

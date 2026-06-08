@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { CampusCinematic } from "@/components/CampusCinematic";
+import { PageHeader } from "./about";
 import { Reveal } from "@/components/Reveal";
 import aerial from "@/assets/school-aerial.jpg";
 import campus from "@/assets/school-campus.jpg";
@@ -8,11 +8,11 @@ import { Trees, Droplets, Toilet, Zap, Volleyball, BookOpen } from "lucide-react
 export const Route = createFileRoute("/campus")({
   head: () => ({
     meta: [
-      { title: "Campus — Cinematic Tour | Nihshreyasa Vidyapeeth" },
-      { name: "description", content: "Take a cinematic 3D scroll-tour of our village school: 4 classrooms, sprawling 3× playground, gardens, sanitation, water and growing infrastructure." },
+      { title: "Campus — Infrastructure & Facilities | Nihshreyasa Vidyapeeth" },
+      { name: "description", content: "Explore the campus of our village school: 4 classrooms, sprawling 3x playground, gardens, sanitation, clean water, and growing infrastructure." },
       { property: "og:title", content: "Campus — Nihshreyasa Vidyapeeth" },
       { property: "og:description", content: "A green, calm, nature-connected campus in rural Jharkhand." },
-      { property: "og:image", content: "/frames/frame-080.jpg" },
+      { property: "og:image", content: "/og-image.jpg" },
     ],
   }),
   component: CampusPage,
@@ -30,7 +30,11 @@ const FACILITIES = [
 function CampusPage() {
   return (
     <div>
-      <CampusCinematic />
+      <PageHeader
+        eyebrow="Campus"
+        title={<>A village campus that breathes <em className="text-primary not-italic">nature</em>.</>}
+        sub="A green, calm, and spacious learning environment featuring a sprawling multi-sport playground that is nearly 3× the size of the building itself."
+      />
 
       <section className="container mx-auto px-4 py-24">
         <div className="text-center max-w-2xl mx-auto">

@@ -11,7 +11,7 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "From a quiet beginning in 2022 to a thriving village school for classes 1–7. Discover our values, NCERT curriculum, JAC alignment and growth journey." },
       { property: "og:title", content: "About Nihshreyasa Vidyapeeth — Our Story" },
       { property: "og:description", content: "A village school grounded in NCERT, JAC and nature. Honest, growing, value-driven." },
-      { property: "og:image", content: "/frames/frame-095.jpg" },
+      { property: "og:image", content: "/og-image.jpg" },
     ],
   }),
   component: AboutPage,

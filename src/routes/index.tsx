@@ -3,7 +3,6 @@ import { Hero } from "@/components/Hero";
 import { FeaturesStrip } from "@/components/FeaturesStrip";
 import { AboutSection } from "@/components/AboutSection";
 import { ProgramsSection } from "@/components/ProgramsSection";
-import { CampusCinematic } from "@/components/CampusCinematic";
 import { WhyUs } from "@/components/WhyUs";
 import { Testimonials } from "@/components/Testimonials";
 import { Faculty } from "@/components/Faculty";
@@ -28,7 +27,6 @@ function HomePage() {
       <FeaturesStrip />
       <AboutSection />
       <ProgramsSection />
-      <CampusCinematic />
       <WhyUs />
       <Testimonials />
       <Faculty />
